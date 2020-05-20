@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup, NavigableString
 
 
 class Scraper:
-
     def __init__(self, url):
         self.page = requests.get(url)
         soup = BeautifulSoup(self.page.content, 'html.parser')
@@ -19,5 +18,6 @@ class Scraper:
 
 
 if __name__ == "__main__":
+
     scraper = Scraper("https://forecast.weather.gov/MapClick.php?lat=41.467431900000065&lon=-81.53766429999996"
                       "#.Xrdb0qhKg2w")
