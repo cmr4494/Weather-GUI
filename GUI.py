@@ -5,7 +5,6 @@ import wx
 class MainWindow(wx.Frame):
     def __init__(self, parent, title):
         wx.Frame.__init__(self, parent, title=title, size=(200, 100))
-        self.temperature = wx.StaticText(blem,-1, style = wx.ALIGN_LEFT | wx.ST_ELLIPSIZE_MIDDLE)
         self.CreateStatusBar()  # A Statusbar in the bottom of the window
 
         # Setting up the menu.
