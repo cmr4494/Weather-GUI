@@ -29,7 +29,8 @@ class Scraper:
         print(self.cloud)    
 
 if __name__ == "__main__":
+    lastUpdate = ""
     while(True):
         scraper = Scraper("https://forecast.weather.gov/MapClick.php?lat=41.467431900000065&lon=-81.53766429999996")
         scraper.getData()
-        time.sleep(3*60*60)
+        

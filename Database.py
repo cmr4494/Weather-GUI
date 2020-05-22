@@ -8,7 +8,9 @@ class Database:
 
     def insert(self, temp_F, temp_C, cloud, date, time):
         toInsert = {"temp_F": temp_F, "temp_C": temp_C, "cloud conditions": cloud, "date": date, "time": time}
-        self.collection.insert_one(toInsert)
+        x = self.collection.insert_one(toInsert)
+        print(x.inserted_id)
+
 if __name__ == "__main__":
     database = Database()
     database.insert(420, 69, "shadyaf", "4/20/69", "4:20:69")
